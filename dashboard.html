@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | University LMS</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+      <div class="sidebar-logo">University LMS</div>
+      <details class="sidebar-details" open>
+        <summary class="sidebar-summary">Menu</summary>
+        <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="assignments.html">Assignments</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+        </nav>
+      </details>
+    </aside>
+    <div class="main-content">
+      <header class="app-header" role="banner">
+        <span class="header-logo">Dashboard</span>
+        <div class="header-user">
+          <img src="images/avatar-placeholder.svg" alt="" class="avatar" width="40" height="40">
+          <span class="name">Alex Johnson</span>
+        </div>
+      </header>
+      <div class="main-inner">
+        <header class="page-header">
+          <h1 class="page-title">Welcome back, Alex</h1>
+          <p class="page-subtitle">Here’s an overview of your academic progress.</p>
+        </header>
+        <section class="dashboard-grid" aria-label="Dashboard summary">
+          <article class="card dashboard-card card-elevation">
+            <div class="card-body">
+              <span class="value">6</span>
+              <span class="label">Enrolled Courses</span>
+            </div>
+          </article>
+          <article class="card dashboard-card card-elevation">
+            <div class="card-body">
+              <span class="value">94%</span>
+              <span class="label">Attendance Percentage</span>
+            </div>
+          </article>
+          <article class="card dashboard-card card-elevation">
+            <div class="card-body">
+              <span class="value">3</span>
+              <span class="label">Assignments Due</span>
+            </div>
+          </article>
+          <article class="card dashboard-card card-elevation">
+            <div class="card-body">
+              <span class="value">3.72</span>
+              <span class="label">Grades / GPA</span>
+            </div>
+          </article>
+        </section>
+        <section class="section-block" style="margin-top: 2rem;">
+          <h2>Quick Links</h2>
+          <p><a href="courses.html">View all courses</a> · <a href="assignments.html">View assignments</a></p>
+        </section>
+      </div>
+      <footer class="app-footer" role="contentinfo">University LMS · © 2026 · Front-end demo</footer>
+    </div>
+  </div>
+</body>
+</html>

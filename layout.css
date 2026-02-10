@@ -1,0 +1,322 @@
+/**
+ * LMS UI - Layout Styles
+ * Grid, Flexbox, sidebar, header, responsive breakpoints
+ */
+
+/* ============================================
+   App Shell (internal pages: dashboard, courses, etc.)
+   ============================================ */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .app-shell {
+    flex-direction: row;
+  }
+}
+
+/* ============================================
+   Sidebar Navigation (sticky left)
+   ============================================ */
+.sidebar {
+  background: var(--color-primary);
+  color: #fff;
+  width: 100%;
+  order: 2;
+  padding: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    order: 1;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+.sidebar-nav {
+  list-style: none;
+}
+
+.sidebar-nav li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.sidebar-nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active page highlighting using CSS */
+.sidebar-nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sidebar-nav a.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 24px;
+  background: #fff;
+  border-radius: 0 4px 4px 0;
+}
+
+.sidebar-nav li {
+  position: relative;
+}
+
+.sidebar-logo {
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Sidebar collapse on mobile: details/summary (no JS) */
+.sidebar-details {
+  margin-bottom: var(--spacing-md);
+}
+
+.sidebar-summary {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-summary::-webkit-details-marker {
+  display: none;
+}
+
+.sidebar-summary::after {
+  content: ' ▼';
+  font-size: var(--text-xs);
+  opacity: 0.8;
+}
+
+.sidebar-details[open] .sidebar-summary::after {
+  content: ' ▲';
+}
+
+@media (min-width: 768px) {
+  .sidebar-summary {
+    display: none;
+  }
+  .sidebar-details[open] .sidebar-summary::after {
+    content: '';
+  }
+}
+
+/* ============================================
+   Main Content Area
+   ============================================ */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-inner {
+  flex: 1;
+  padding: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .main-inner {
+    padding: var(--spacing-xl);
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-inner {
+    padding: var(--spacing-2xl);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================
+   Header (top bar with user name and profile)
+   ============================================ */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 var(--spacing-lg);
+  background: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.header-user .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-primary-light);
+}
+
+.header-user .name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@media (max-width: 767px) {
+  .header-user .name {
+    display: none;
+  }
+}
+
+/* ============================================
+   Dashboard Grid Layout
+   ============================================ */
+.dashboard-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================================
+   Course List Grid (courses page)
+   ============================================ */
+.courses-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .courses-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   Course Detail Two-Column Layout
+   ============================================ */
+.course-detail-layout {
+  display: grid;
+  gap: var(--spacing-xl);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .course-detail-layout {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .course-detail-layout {
+    grid-template-columns: 320px 1fr;
+  }
+}
+
+.course-detail-sidebar {
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .course-detail-sidebar {
+    order: 1;
+  }
+}
+
+.course-detail-main {
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .course-detail-main {
+    order: 2;
+  }
+}
+
+/* ============================================
+   Page Title Section
+   ============================================ */
+.page-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.page-subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.app-footer {
+  padding: var(--spacing-lg);
+  background: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: auto;
+}

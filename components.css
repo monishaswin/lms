@@ -1,0 +1,436 @@
+/**
+ * LMS UI - Component Styles
+ * Cards, buttons, badges, forms, list layouts
+ */
+
+/* ============================================
+   Buttons
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-family: inherit;
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1.5;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-primary:disabled,
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ============================================
+   Cards (reusable)
+   ============================================ */
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-elevation:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card-body {
+  padding: var(--spacing-lg);
+}
+
+.card-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-meta {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* ============================================
+   Dashboard Summary Cards
+   ============================================ */
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 120px;
+}
+
+.dashboard-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dashboard-card .value {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.dashboard-card .label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ============================================
+   Course Cards (course list)
+   ============================================ */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card .course-code {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xs);
+}
+
+.course-card .instructor {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+}
+
+/* ============================================
+   Status Badges
+   ============================================ */
+.badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+}
+
+.badge-active {
+  background-color: rgba(56, 161, 105, 0.15);
+  color: var(--color-success);
+}
+
+.badge-completed {
+  background-color: rgba(113, 128, 150, 0.2);
+  color: var(--color-text-muted);
+}
+
+.badge-pending {
+  background-color: rgba(214, 158, 46, 0.2);
+  color: var(--color-warning);
+}
+
+.badge-submitted {
+  background-color: rgba(56, 161, 105, 0.15);
+  color: var(--color-success);
+}
+
+.badge-late {
+  background-color: rgba(229, 62, 62, 0.15);
+  color: var(--color-danger);
+}
+
+/* ============================================
+   Login Card & Form
+   ============================================ */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-2xl);
+}
+
+.login-card h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+.form-control::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-footer {
+  margin-top: var(--spacing-md);
+  text-align: center;
+}
+
+.form-footer a {
+  font-size: var(--text-sm);
+}
+
+.login-card .btn {
+  margin-top: var(--spacing-md);
+  width: 100%;
+}
+
+/* ============================================
+   Syllabus / Nav List (course detail)
+   ============================================ */
+.syllabus-list {
+  list-style: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.syllabus-list li {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.syllabus-list li:last-child {
+  border-bottom: none;
+}
+
+.syllabus-list a {
+  display: block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.syllabus-list a:hover {
+  background-color: var(--color-bg);
+  text-decoration: none;
+}
+
+.section-block {
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ============================================
+   Instructor Profile Card
+   ============================================ */
+.instructor-card {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.instructor-card .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto var(--spacing-md);
+  object-fit: cover;
+  background: var(--color-primary-light);
+}
+
+.instructor-card .name {
+  font-weight: 600;
+  font-size: var(--text-lg);
+  margin-bottom: var(--spacing-xs);
+}
+
+.instructor-card .role {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+/* ============================================
+   Assignment List
+   ============================================ */
+.assignment-list {
+  list-style: none;
+}
+
+.assignment-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  background: var(--color-bg-card);
+  transition: box-shadow 0.2s;
+}
+
+.assignment-item:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.assignment-item .title {
+  flex: 1 1 100%;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+@media (min-width: 768px) {
+  .assignment-item .title {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
+}
+
+.assignment-item .due-date {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* File upload UI (visual only) */
+.upload-zone {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  text-align: center;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.upload-zone::before {
+  content: '📎';
+  display: block;
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   Profile Page
+   ============================================ */
+.profile-card {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.profile-card .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto var(--spacing-lg);
+  object-fit: cover;
+  background: var(--color-primary-light);
+}
+
+.profile-card .name {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.profile-card .roll-number {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.profile-details {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-details .form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.profile-details .form-control {
+  background-color: var(--color-bg);
+  cursor: not-allowed;
+  color: var(--color-text);
+}
+
+/* Read-only field styling */
+.profile-details input[readonly] {
+  border-style: dotted;
+}

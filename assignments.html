@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments | University LMS</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+      <div class="sidebar-logo">University LMS</div>
+      <details class="sidebar-details" open>
+        <summary class="sidebar-summary">Menu</summary>
+        <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="assignments.html" class="active">Assignments</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+        </nav>
+      </details>
+    </aside>
+    <div class="main-content">
+      <header class="app-header" role="banner">
+        <span class="header-logo">Assignments</span>
+        <div class="header-user">
+          <img src="images/avatar-placeholder.svg" alt="" class="avatar" width="40" height="40">
+          <span class="name">Alex Johnson</span>
+        </div>
+      </header>
+      <div class="main-inner">
+        <header class="page-header">
+          <h1 class="page-title">Assignments</h1>
+          <p class="page-subtitle">View and submit your course assignments.</p>
+        </header>
+        <section class="section-block">
+          <h2>Assignment List</h2>
+          <ul class="assignment-list">
+            <li class="assignment-item">
+              <span class="title">Problem Set 3: Trees and BST</span>
+              <span class="due-date">Due: Feb 15, 2026</span>
+              <span class="badge badge-pending">Pending</span>
+            </li>
+            <li class="assignment-item">
+              <span class="title">Lab 4: Graph Traversal</span>
+              <span class="due-date">Due: Feb 10, 2026</span>
+              <span class="badge badge-submitted">Submitted</span>
+            </li>
+            <li class="assignment-item">
+              <span class="title">Essay: Technical Documentation</span>
+              <span class="due-date">Due: Feb 5, 2026</span>
+              <span class="badge badge-late">Late</span>
+            </li>
+            <li class="assignment-item">
+              <span class="title">Quiz 2: Linear Algebra</span>
+              <span class="due-date">Due: Feb 20, 2026</span>
+              <span class="badge badge-pending">Pending</span>
+            </li>
+          </ul>
+        </section>
+        <section class="section-block">
+          <h2>Submit Assignment</h2>
+          <p class="card-meta">Select an assignment above to submit. (UI only — no functionality.)</p>
+          <div class="upload-zone" aria-hidden="true">
+            Drag and drop your file here, or click to browse
+          </div>
+          <button type="button" class="btn btn-primary" disabled>Submit</button>
+        </section>
+      </div>
+      <footer class="app-footer" role="contentinfo">University LMS · © 2026 · Front-end demo</footer>
+    </div>
+  </div>
+</body>
+</html>

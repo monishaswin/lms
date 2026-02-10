@@ -1,2 +1,1 @@
-# lms
-Dashboard
+# lms-ui

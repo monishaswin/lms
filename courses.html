@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | University LMS</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+      <div class="sidebar-logo">University LMS</div>
+      <details class="sidebar-details" open>
+        <summary class="sidebar-summary">Menu</summary>
+        <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="courses.html" class="active">Courses</a></li>
+          <li><a href="assignments.html">Assignments</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+        </nav>
+      </details>
+    </aside>
+    <div class="main-content">
+      <header class="app-header" role="banner">
+        <span class="header-logo">Courses</span>
+        <div class="header-user">
+          <img src="images/avatar-placeholder.svg" alt="" class="avatar" width="40" height="40">
+          <span class="name">Alex Johnson</span>
+        </div>
+      </header>
+      <div class="main-inner">
+        <header class="page-header">
+          <h1 class="page-title">My Courses</h1>
+          <p class="page-subtitle">View and access your enrolled courses.</p>
+        </header>
+        <div class="courses-grid">
+          <article class="card course-card card-elevation">
+            <div class="card-body">
+              <span class="badge badge-active">Active</span>
+              <span class="course-code">CS 301</span>
+              <h3 class="card-title">Data Structures & Algorithms</h3>
+              <p class="instructor">Dr. Sarah Chen</p>
+              <a href="course-detail.html" class="btn btn-primary" style="margin-top: 1rem;">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card card-elevation">
+            <div class="card-body">
+              <span class="badge badge-active">Active</span>
+              <span class="course-code">MATH 205</span>
+              <h3 class="card-title">Linear Algebra</h3>
+              <p class="instructor">Prof. James Wilson</p>
+              <a href="course-detail.html" class="btn btn-primary" style="margin-top: 1rem;">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card card-elevation">
+            <div class="card-body">
+              <span class="badge badge-active">Active</span>
+              <span class="course-code">ENG 101</span>
+              <h3 class="card-title">Technical Writing</h3>
+              <p class="instructor">Dr. Emily Roberts</p>
+              <a href="course-detail.html" class="btn btn-primary" style="margin-top: 1rem;">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card card-elevation">
+            <div class="card-body">
+              <span class="badge badge-completed">Completed</span>
+              <span class="course-code">CS 201</span>
+              <h3 class="card-title">Introduction to Programming</h3>
+              <p class="instructor">Dr. Michael Brown</p>
+              <a href="course-detail.html" class="btn btn-primary" style="margin-top: 1rem;">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card card-elevation">
+            <div class="card-body">
+              <span class="badge badge-active">Active</span>
+              <span class="course-code">PHYS 150</span>
+              <h3 class="card-title">Physics I: Mechanics</h3>
+              <p class="instructor">Prof. Lisa Park</p>
+              <a href="course-detail.html" class="btn btn-primary" style="margin-top: 1rem;">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card card-elevation">
+            <div class="card-body">
+              <span class="badge badge-completed">Completed</span>
+              <span class="course-code">HIST 110</span>
+              <h3 class="card-title">World History</h3>
+              <p class="instructor">Dr. David Lee</p>
+              <a href="course-detail.html" class="btn btn-primary" style="margin-top: 1rem;">View Course</a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <footer class="app-footer" role="contentinfo">University LMS · © 2026 · Front-end demo</footer>
+    </div>
+  </div>
+</body>
+</html>

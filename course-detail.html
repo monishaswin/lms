@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Detail | University LMS</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+      <div class="sidebar-logo">University LMS</div>
+      <details class="sidebar-details" open>
+        <summary class="sidebar-summary">Menu</summary>
+        <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="courses.html" class="active">Courses</a></li>
+          <li><a href="assignments.html">Assignments</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+        </nav>
+      </details>
+    </aside>
+    <div class="main-content">
+      <header class="app-header" role="banner">
+        <span class="header-logo">Course</span>
+        <div class="header-user">
+          <img src="images/avatar-placeholder.svg" alt="" class="avatar" width="40" height="40">
+          <span class="name">Alex Johnson</span>
+        </div>
+      </header>
+      <div class="main-inner">
+        <div class="course-detail-layout">
+          <aside class="course-detail-sidebar">
+            <div class="card section-block">
+              <div class="card-body">
+                <h3>Course Navigation</h3>
+                <ul class="syllabus-list">
+                  <li><a href="#overview">Overview</a></li>
+                  <li><a href="#syllabus">Syllabus</a></li>
+                  <li><a href="#instructor">Instructor</a></li>
+                  <li><a href="#resources">Resources</a></li>
+                  <li><a href="#announcements">Announcements</a></li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+          <main class="course-detail-main" role="main">
+            <header class="page-header">
+              <span class="badge badge-active">Active</span>
+              <span class="course-code">CS 301</span>
+              <h1 class="page-title">Data Structures & Algorithms</h1>
+              <p class="page-subtitle">Fall 2025 · 3 credits</p>
+            </header>
+            <section id="overview" class="section-block">
+              <h2>Course Description</h2>
+              <p>This course covers fundamental data structures (arrays, linked lists, stacks, queues, trees, graphs) and algorithms for searching, sorting, and graph traversal. Students will analyze time and space complexity and implement solutions in a high-level language.</p>
+            </section>
+            <section id="syllabus" class="section-block">
+              <h2>Syllabus</h2>
+              <ul style="margin-left: 1.25rem;">
+                <li>Week 1–2: Arrays and Linked Lists</li>
+                <li>Week 3–4: Stacks and Queues</li>
+                <li>Week 5–7: Trees and Binary Search Trees</li>
+                <li>Week 8–9: Heaps and Priority Queues</li>
+                <li>Week 10–11: Graphs and Traversal</li>
+                <li>Week 12–14: Sorting and Searching Algorithms</li>
+                <li>Week 15: Review and Final Project</li>
+              </ul>
+            </section>
+            <section id="instructor" class="section-block">
+              <h2>Instructor</h2>
+              <div class="card instructor-card">
+                <img src="images/avatar-placeholder.svg" alt="" class="avatar" width="80" height="80">
+                <div class="name">Dr. Sarah Chen</div>
+                <div class="role">Associate Professor, Computer Science</div>
+                <p class="card-meta">Office: EB 302 · Office hours: Tue/Thu 2–4 PM</p>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+      <footer class="app-footer" role="contentinfo">University LMS · © 2026 · Front-end demo</footer>
+    </div>
+  </div>
+</body>
+</html>
